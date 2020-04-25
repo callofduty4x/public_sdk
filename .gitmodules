@@ -1,0 +1,9 @@
+[submodule "mbedtls/mbedtls"]
+	path = mbedtls/mbedtls
+	url = git@github.com:ARMmbed/mbedtls.git
+[submodule "tomcrypt/libtomcrypt"]
+	path = tomcrypt/libtomcrypt
+	url = git@github.com:libtom/libtomcrypt.git
+[submodule "zlib/zlib"]
+	path = zlib/zlib
+	url = git@github.com:madler/zlib.git
