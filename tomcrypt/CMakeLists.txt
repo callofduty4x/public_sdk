@@ -17,5 +17,5 @@ endif()
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE LTC_NO_ROLC LTC_SOURCE)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER "sdk/tomcrypt")
+set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER "public_sdk/tomcrypt")
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/libtomcrypt FILES ${CPP_SRC} ${CPP_INC})
