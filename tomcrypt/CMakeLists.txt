@@ -4,6 +4,7 @@ file(GLOB_RECURSE CPP_SRC libtomcrypt/src/*.c)
 file(GLOB_RECURSE CPP_INC libtomcrypt/src/headers/*.h libtomcrypt/src/headers/*.hpp)
 
 add_library(${PROJECT_NAME} STATIC ${CPP_SRC} ${CPP_INC})
+target_link_libraries(${PROJECT_NAME} tommath)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/libtomcrypt/src/headers)
 
 if (MSVC)
@@ -15,7 +16,7 @@ else()
     target_compile_options(${PROJECT_NAME} PRIVATE -m32 -Wall -Os -s)
 endif()
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE LTC_NO_ROLC LTC_SOURCE)
+target_compile_definitions(${PROJECT_NAME} PRIVATE LTC_NO_ROLC LTC_SOURCE PUBLIC LTM_DESC)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER "public_sdk/tomcrypt")
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/libtomcrypt FILES ${CPP_SRC} ${CPP_INC})

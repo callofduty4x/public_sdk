@@ -7,4 +7,5 @@ project(public_sdk)
 
 add_subdirectory(mbedtls)
 add_subdirectory(tomcrypt)
+add_subdirectory(tommath)
 add_subdirectory(zlib)
