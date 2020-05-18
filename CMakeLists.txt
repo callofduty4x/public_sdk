@@ -5,6 +5,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project(public_sdk)
 
+add_subdirectory(lua)
 add_subdirectory(mbedtls)
 add_subdirectory(tomcrypt)
 add_subdirectory(zlib)

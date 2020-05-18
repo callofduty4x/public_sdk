@@ -7,3 +7,6 @@
 [submodule "zlib/zlib"]
 	path = zlib/zlib
 	url = git@github.com:madler/zlib.git
+[submodule "lua/lua"]
+	path = lua/lua
+	url = git@github.com:lua/lua.git
